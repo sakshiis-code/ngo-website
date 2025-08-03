@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer - Udaan Foundation</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Udaan Foundation</h1>
+        <p class="tagline">Let every child fly</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="volunteer.html">Volunteer</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Join Our Mission</h2>
+        <p>Become a volunteer and help us transform lives through education and compassion.</p>
+    </section>
+
+    <section class="form-section">
+        <form id="volunteerForm" action="#" method="post" class="volunteer-form">
+
+            <label for="name" class="required">Full Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+
+            <label for="phone" class="required">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+
+            <label for="interest" class="required">Area of Interest</label>
+            <select id="interest" name="interest" required>
+                <option value="" disabled selected>Select an area</option>
+                <option>Teaching</option>
+                <option>Fundraising</option>
+                <option>Healthcare Support</option>
+                <option>Digital Media</option>
+                <option>Event Organizing</option>
+            </select>
+
+            <label for="message" class="required">Why do you want to volunteer with us?</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Share your motivation..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="thankYouPopup" class="popup hidden">
+            <div class="popup-content">
+                <h3>Thank You! 💙</h3>
+                <p>Your interest in volunteering means the world to us!</p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Udaan Foundation | Volunteer with heart ❤️</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('volunteerForm');
+        const popup = document.getElementById('thankYouPopup');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // prevent actual submission
+            popup.classList.remove('hidden');
+            form.reset(); // optional: clear form
+        });
+
+        function closePopup() {
+            popup.classList.add('hidden');
+        }
+    </script>
+
+</body>
+
+</html>

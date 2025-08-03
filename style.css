@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+:root {
+  --primary: #4A90E2;
+  --accent: #FFC3A0;
+  --background: #FFF8F0;
+  --text: #333;
+  --footer: #2C3E50;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: var(--footer);
+  color: var(--white);
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.tagline {
+  font-style: italic;
+  margin: 5px 0 15px;
+  color: #ddd;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero-image {
+  background: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  color: white;
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-image .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+.hero-image h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--accent);
+  border: none;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fca686;
+}
+
+/* Mission Section */
+.mission {
+  padding: 40px 20px;
+  background: var(--white);
+  text-align: center;
+}
+
+.mission h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* Highlights Section */
+.about-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #fefefe;
+  padding: 50px 20px;
+  gap: 40px;
+}
+
+.about-details .content {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.about-details .content:hover {
+  transform: translateY(-5px);
+}
+
+.about-details .icon {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+/* Quote Section */
+.quote {
+  padding: 40px 20px;
+  background: var(--accent);
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #4e342e;
+  margin-top: 20px;
+}
+
+/* Volunteer Form */
+.form-section {
+  background: #fff;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.volunteer-form {
+  width: 100%;
+  max-width: 500px;
+  background: var(--background);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+.volunteer-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+label.required::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+}
+
+.volunteer-form input,
+.volunteer-form select,
+.volunteer-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.volunteer-form input:focus,
+.volunteer-form select:focus,
+.volunteer-form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+}
+
+.volunteer-form button {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.volunteer-form button:hover {
+  background-color: #2567c3;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer);
+  color: white;
+  text-align: center;
+  padding: 18px 10px;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .about-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-details .content {
+    width: 90%;
+  }
+
+  .hero-image .overlay {
+    padding: 30px 20px;
+  }
+
+  .hero-image h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+.hero {
+  background: url('https://volunteeringjourneys.com/wp-content/uploads/2021/11/VJ-teaching-english-in-india-cover@2x-copy-1200x408.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+  z-index: 0;
+}
+
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: popIn 0.4s ease-in-out;
+}
+
+.popup-content h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.popup-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: #145ca1;
+}
+
+/* Animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.form-section {
+  background: url('https://res.cloudinary.com/cognitives-s3/image/upload/c_limit,dpr_auto,f_auto,fl_lossy,h_1900,q_auto,w_1900/v1/cog-live/n/1271/2024/May/21/btaM5jhYBAXNx1HwaPcg.jpg') center/cover no-repeat;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.form-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white overlay */
+  z-index: 0;
+  border-radius: 0;
+}
+
+.volunteer-form {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.volunteer-form:hover {
+  transform: translateY(-4px);
+}
